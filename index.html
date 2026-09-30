@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Le ultime notizie tech da Hacker News, a dieci alla volta." />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Tongue · Tech news</title>
+  </head>
+  <body>
+    <header class="masthead">
+      <h1 class="masthead__title">Tongue</h1>
+      <p class="masthead__subtitle">Le ultime notizie tech da Hacker News, a dieci alla volta.</p>
+    </header>
+
+    <main class="feed">
+      <ol id="news-list" class="news-list" aria-live="polite"></ol>
+
+      <p id="status" class="status" role="status" hidden></p>
+
+      <button id="load-more" class="load-more" type="button" hidden>Load more</button>
+    </main>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

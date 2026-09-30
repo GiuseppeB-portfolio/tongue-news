@@ -1,0 +1,144 @@
+:root {
+  --paper: #f5f6f8;
+  --ink: #14161a;
+  --muted: #5d6470;
+  --rule: #d9dce2;
+  --tongue: #ff4f70;
+  --tongue-dark: #d62f52;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.masthead {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 2rem;
+}
+
+.masthead__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 14vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--tongue);
+}
+
+.masthead__subtitle {
+  margin: 1rem 0 0;
+  max-width: 32rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.feed {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 5rem;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.news-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.news-item__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.news-item__link {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(var(--tongue), var(--tongue));
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease;
+}
+
+.news-item__link:hover,
+.news-item__link:focus-visible {
+  background-size: 100% 2px;
+}
+
+.news-item__meta {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.news-item__domain {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.status {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+}
+
+.status--error {
+  color: var(--tongue-dark);
+}
+
+.load-more {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.load-more:hover:not(:disabled) {
+  background: var(--tongue);
+  border-color: var(--tongue);
+}
+
+.load-more:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--tongue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
