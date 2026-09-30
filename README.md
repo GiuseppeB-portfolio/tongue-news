@@ -2,9 +2,8 @@
 
 Applicazione web che mostra le ultime notizie di [Hacker News](https://github.com/HackerNews/API) per il progetto finale del corso JavaScript Advanced. Per ogni notizia si vedono titolo, link e data di pubblicazione. Le notizie si caricano a blocchi di dieci con il pulsante "Load more".
 
-**Prova l'app online:** [INSERISCI QUI IL LINK DI NETLIFY](https://example.netlify.app)
+**Prova l'app online:** https://tongue-news-giuseppe.netlify.app/
 
-![Screenshot dell'app](img/screenshot.png)
 
 ## Come funziona
 
